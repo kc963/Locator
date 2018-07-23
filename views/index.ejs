@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="application/javascript" src="/javascripts/indexfront.js"></script>
+    <%- include('./partials/html_head_links.ejs')%>
+  </head>
+  <body>
+
+    <%- include('./partials/header.ejs')%>
+
+    <div class="container align-items-center" style="border: 2px solid darkgray; margin-top: 3vh; background-color: white; padding-bottom: 1vh">
+      <div class="row">
+        <div class="col">
+
+          <div class="row align-items-center">
+            <div id="loginlabel" class="border-bottom col col-md-8 alert alert-light text-center" onclick="changetologin()">Log In</div>
+            <div id="signuplabel" class="col col-md-4 alert alert-dark text-center" onclick="changetosignup()">Sign Up</div>
+          </div>
+
+          <!-- Log In form-->
+          <form id="loginform">
+            <div class="form-group">
+              <label for="loginEmail">Email</label>
+              <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Go!</button>
+          </form>
+
+          <!-- Sign Up form -->
+          <form id="signupform" hidden>
+            <div class="form-group">
+              <label for="signupEmail">Email</label>
+              <input type="email" class="form-control" id="signupEmail" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="signupPassword">Password</label>
+              <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="inputCPassword">Confirm Password</label>
+              <input type="password" class="form-control" id="inputCPassword" placeholder="Confirm Password">
+            </div>
+            <div class="form-group">
+              <label for="inputDname">Display Name</label>
+              <div class="form-row">
+                <input type="text" class="form-control" id="inputDname" placeholder="Display Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputName">Name</label>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="inputFname" placeholder="First Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="inputLname" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary">Go!</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
